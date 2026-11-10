@@ -1,0 +1,1352 @@
+<!-- ... existing code ... -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Alternative Medicine and Social Sciences</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        indigo: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#1e1b4b',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Colorful Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%);
+            border-radius: 9999px;
+        }
+
+        /* Vibrant Gradients & Animations */
+        .gradient-text-vibrant {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-vibrant-bg {
+            background: radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.25) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.25) 0%, transparent 40%),
+                        radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                        linear-gradient(135deg, #064e3b 0%, #1e1b4b 50%, #0f172a 100%);
+        }
+
+        .glass-vibrant {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .dark .glass-vibrant {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .pulse-border {
+            animation: pulseGlow 2.5s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+            100% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8), 0 0 15px rgba(236, 72, 153, 0.4); }
+        }
+
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 35s linear infinite;
+        }
+        .ticker-move:hover {
+            animation-play-state: paused;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+    <!-- TOP ANNOUNCEMENT TICKER -->
+    <div class="bg-gradient-to-r from-emerald-600 via-indigo-600 to-pink-600 text-white text-xs font-semibold py-2 px-4 shadow-md flex items-center justify-between z-50 relative">
+        <div class="flex items-center space-x-2 shrink-0 bg-black/20 backdrop-blur-md px-3 py-1 rounded-full text-gold-400 font-black tracking-wider uppercase">
+            <i class="fa-solid fa-bullhorn animate-bounce"></i>
+            <span>NEWS TICKER</span>
+        </div>
+        <div class="ticker-wrap w-full mx-4 overflow-hidden">
+            <div class="ticker-move flex space-x-8 text-xs font-medium">
+                <span>🎓 Admissions Open for Session 2026-27 | Faculty of Alternative Medicine & Social Sciences</span>
+                <span>📞 Helpline: <a href="tel:03092625238" class="underline font-bold text-gold-300">03092625238</a></span>
+                <span>✉️ Official Email: <a href="mailto:lhramcollage@gmail.com" class="underline font-bold text-gold-300">lhramcollage@gmail.com</a></span>
+                <span>🌿 7 Special Therapies & 45 Social Science Disciplines Available with Scholarship Options!</span>
+                <span>🎓 Admissions Open for Session 2026-27 | Faculty of Alternative Medicine & Social Sciences</span>
+                <span>📞 Helpline: <a href="tel:03092625238" class="underline font-bold text-gold-300">03092625238</a></span>
+                <span>✉️ Official Email: <a href="mailto:lhramcollage@gmail.com" class="underline font-bold text-gold-300">lhramcollage@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="hidden sm:flex items-center space-x-3 text-xs shrink-0">
+            <button onclick="toggleDarkMode()" class="p-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors">
+                <i class="fa-solid fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:inline text-gold-400"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- EXECUTIVE NAV BAR -->
+    <nav class="sticky top-0 z-40 glass-vibrant shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 via-indigo-500 to-pink-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-black font-serif tracking-tight gradient-text-vibrant">SAMSS</span>
+                        <span class="block text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">School of Alternative Medicine & Social Sciences</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-200">
+                    <a href="#home" class="hover:text-emerald-500 transition-colors py-2">Home</a>
+                    <a href="#live-dashboard" class="hover:text-emerald-500 transition-colors py-2 flex items-center space-x-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span>Live Admin Board</span>
+                    </a>
+                    <a href="#definitions" class="hover:text-emerald-500 transition-colors py-2">Definitions</a>
+                    <a href="#courses" class="hover:text-emerald-500 transition-colors py-2">52 Disciplines</a>
+                    <a href="#calculator" class="hover:text-emerald-500 transition-colors py-2">Fee Estimator</a>
+                    <a href="#upload-portal" class="hover:text-emerald-500 transition-colors py-2">Upload Center</a>
+                    <a href="#admission-section" class="hover:text-emerald-500 transition-colors py-2">Admission Form</a>
+                </div>
+
+                <!-- CTA & Theme Toggle Button -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-gold-400 hover:bg-slate-200 transition-all">
+                        <i class="fa-solid fa-moon text-base dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-base hidden dark:inline"></i>
+                    </button>
+                    <button onclick="openAdmissionModal()" class="bg-gradient-to-r from-emerald-500 via-teal-500 to-indigo-600 hover:opacity-95 text-white text-xs font-black uppercase px-5 py-3 rounded-xl shadow-md hover:shadow-emerald-500/30 transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Apply Online</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-200">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Home</a>
+            <a href="#live-dashboard" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Live Admin Board</a>
+            <a href="#definitions" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Definitions & Functions</a>
+            <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">All 52 Subjects Directory</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Fee Estimator</a>
+            <a href="#upload-portal" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Upload Media Center</a>
+            <a href="#admission-section" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 dark:text-slate-200 font-bold">Online Admission Form</a>
+            <div class="pt-2 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-500">Toggle Theme:</span>
+                <button onclick="toggleDarkMode()" class="px-4 py-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-xs font-bold">
+                    Light / Dark Mode
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative hero-vibrant-bg text-white overflow-hidden py-20 lg:py-28 border-b border-emerald-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/30 to-indigo-500/30 backdrop-blur-md border border-emerald-400/40 px-4 py-2 rounded-full text-emerald-300 text-xs font-black uppercase tracking-widest shadow-lg">
+                        <i class="fa-solid fa-award text-gold-400 text-sm"></i>
+                        <span>Pioneering Holistic Healing & Humanities</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold font-serif tracking-tight leading-tight">
+                        School of Alternative Medicine & <span class="gradient-text-vibrant">Social Sciences</span>
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Fostering holistic health practitioners and social science researchers. We offer <strong>7 Alternative Healing Therapies</strong> alongside <strong>45 Social Science & Science Disciplines</strong> under expert academic direction.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openAdmissionModal()" class="w-full sm:w-auto bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500 hover:from-emerald-500 hover:to-indigo-600 text-slate-950 font-black text-sm uppercase px-8 py-4 rounded-2xl shadow-xl hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-3">
+                            <span>Start Online Admission</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <a href="#courses" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-sm uppercase px-8 py-4 rounded-2xl backdrop-blur-md transition-all text-center">
+                            Explore 52 Subjects
+                        </a>
+                    </div>
+
+                    <!-- Live Quick Stats -->
+                    <div class="pt-10 grid grid-cols-3 gap-4 border-t border-white/10 text-center lg:text-left">
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span class="block text-3xl font-black gradient-text-gold">52</span>
+                            <span class="text-[11px] text-slate-300 font-semibold uppercase">Total Subjects</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span class="block text-3xl font-black text-emerald-400">7</span>
+                            <span class="text-[11px] text-slate-300 font-semibold uppercase">Therapy Wings</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span class="block text-3xl font-black text-sky-400">100%</span>
+                            <span class="text-[11px] text-slate-300 font-semibold uppercase">Online Portal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Helpline Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-900/90 text-white p-8 rounded-3xl shadow-2xl border border-emerald-500/30 relative pulse-border">
+                        <div class="absolute -top-4 -right-2 bg-gradient-to-r from-gold-500 to-amber-600 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full shadow-lg">
+                            Admissions 2026-27 Active
+                        </div>
+                        <h3 class="text-2xl font-black font-serif text-white mb-2">Institutional Helpline</h3>
+                        <p class="text-xs text-slate-400 mb-6">Contact our helpline directly or email us for course eligibility & guidance.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-slate-800/80 rounded-2xl border border-slate-700/80">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mr-4 text-xl shrink-0">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider">Official Phone Helpline</span>
+                                    <a href="tel:03092625238" class="text-xl font-extrabold text-gold-400 hover:text-white">03092625238</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-slate-800/80 rounded-2xl border border-slate-700/80">
+                                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mr-4 text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider">Official Email Address</span>
+                                    <a href="mailto:lhramcollage@gmail.com" class="text-sm font-extrabold text-indigo-300 hover:text-white truncate block">lhramcollage@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <button onclick="openAdmissionModal()" class="w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-4 rounded-xl text-xs uppercase tracking-wider shadow-lg transition-all mt-2">
+                                Launch Fast Online Admission Form
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE HOME PAGE SUBMISSIONS, ADMISSION & QUERIES ADMIN BOARD -->
+    <section id="live-dashboard" class="py-20 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <div class="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest mb-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-600"></span>
+                        </span>
+                        <span>Institutional Activity Tracker</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black font-serif text-slate-900 dark:text-white">Live Admissions & Inquiry Activity Board</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Real-time log of applicants, student inquiries, and uploaded academic materials sent to our admissions center.</p>
+                </div>
+
+                <!-- Admin Action Tools -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-3">
+                    <button onclick="exportData('csv')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-file-csv"></i>
+                        <span>Export CSV</span>
+                    </button>
+                    <button onclick="exportData('json')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>Export JSON</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Total Admissions</span>
+                        <span id="stat-admissions" class="text-2xl font-black text-slate-900 dark:text-white">0</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Student Queries</span>
+                        <span id="stat-queries" class="text-2xl font-black text-slate-900 dark:text-white">0</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Media Uploads</span>
+                        <span id="stat-uploads" class="text-2xl font-black text-slate-900 dark:text-white">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button onclick="filterFeed('all')" id="feed-filter-all" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-emerald-600 text-white transition-all">All Records</button>
+                    <button onclick="filterFeed('Admission')" id="feed-filter-Admission" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">Admissions Only</button>
+                    <button onclick="filterFeed('Query')" id="feed-filter-Query" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">Student Queries</button>
+                    <button onclick="filterFeed('Upload')" id="feed-filter-Upload" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">Uploaded Content</button>
+                </div>
+
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-bold flex items-center space-x-2">
+                    <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+                    <span>Contact: 03092625238 | lhramcollage@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- Submissions Dynamic Feed List -->
+            <div id="activity-feed-container" class="space-y-4 max-h-[550px] overflow-y-auto pr-2">
+                <!-- JS dynamically populates -->
+            </div>
+        </div>
+    </section>
+
+    <!-- DEFINITION AND FUNCTIONS SECTION -->
+    <section id="definitions" class="py-24 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold uppercase text-xs tracking-widest block mb-2">Institutional Vision</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-slate-900 dark:text-white">Definitions & Educational Core Functions</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-emerald-500 via-indigo-500 to-pink-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Alternative Medicine Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-emerald-50/40 dark:from-slate-900 dark:to-emerald-950/30 rounded-3xl p-8 border border-emerald-200 dark:border-emerald-800/40 shadow-lg glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-tr from-emerald-500 to-teal-400 text-white rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-md">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="text-2xl font-black font-serif text-slate-900 dark:text-white mb-4">Faculty of Alternative Medicine</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-xs font-black uppercase text-emerald-600 dark:text-emerald-400 tracking-wider mb-2">Definition</h4>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                <strong>Alternative Medicine</strong> refers to non-allopathic diagnostic and healing sciences including Electrohomeopathy, Acupuncture, Hydrotherapy, Chromotherapy, Aromatherapy, and Naturopathy that aim to activate self-healing mechanisms and restore bio-energetic balance.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-black uppercase text-emerald-600 dark:text-emerald-400 tracking-wider mb-2">Primary Functions</h4>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Holistic Patient Assessment:</strong> Addressing constitutional, physical, and cellular vitality.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Natural Spagyric Therapeutics:</strong> Formulating non-toxic remedies from plant essences.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Preventative Vitality Restoration:</strong> Enhancing metabolic immunity naturally.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Sciences Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-indigo-50/40 dark:from-slate-900 dark:to-indigo-950/30 rounded-3xl p-8 border border-indigo-200 dark:border-indigo-800/40 shadow-lg glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-tr from-indigo-500 to-purple-500 text-white rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-md">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-2xl font-black font-serif text-slate-900 dark:text-white mb-4">Faculty of Social Sciences & Humanities</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 tracking-wider mb-2">Definition</h4>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                <strong>Social Sciences</strong> represent academic disciplines that analyze governance, economic structures, international dynamics, legal frameworks, history, human behavior, languages, and natural physical sciences.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 tracking-wider mb-2">Primary Functions</h4>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-indigo-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Governance & Policy Formulation:</strong> Training future administrators, legal experts, and diplomats.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-indigo-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Socio-Economic Analytical Excellence:</strong> Conducting research in economics, statistics, and urban planning.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-indigo-500 mt-1 mr-2 text-xs"></i>
+                                    <span><strong>Cultural & Linguistic Heritage:</strong> Preserving national history and classical/regional languages.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL 52 DISCIPLINES SEARCHABLE DIRECTORY SECTION -->
+    <section id="courses" class="py-24 bg-slate-100 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-extrabold uppercase text-xs tracking-widest block mb-2">Complete Academic Catalog</span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-serif text-slate-900 dark:text-white">Explore All 52 Subjects</h2>
+                </div>
+                <!-- Category Tabs -->
+                <div class="mt-6 md:mt-0 flex space-x-2 bg-white dark:bg-slate-800 p-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                    <button onclick="switchTab('all')" id="tab-all" class="px-5 py-2.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-emerald-500 to-indigo-600 text-white">All (52)</button>
+                    <button onclick="switchTab('medicine')" id="tab-medicine" class="px-5 py-2.5 rounded-xl text-xs font-black transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">7 Therapies</button>
+                    <button onclick="switchTab('social')" id="tab-social" class="px-5 py-2.5 rounded-xl text-xs font-black transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">45 Humanities & Sciences</button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-10 relative max-w-lg">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
+                <input type="text" id="course-search" oninput="filterCourses()" placeholder="Search discipline (e.g. Electrohomeopathy, Law, IR, Arabic)..." class="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-900 dark:text-white shadow-md">
+            </div>
+
+            <!-- Course Grid Container -->
+            <div id="course-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Dynamically Populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- DYNAMIC TUITION FEE ESTIMATOR CALCULATOR -->
+    <section id="calculator" class="py-20 bg-white dark:bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="text-gold-400 font-extrabold uppercase text-xs tracking-widest block mb-2">Interactive Fee Tool</span>
+                    <h3 class="text-3xl font-black font-serif">Tuition Fee Estimator</h3>
+                    <p class="text-xs text-slate-300 mt-2">Calculate estimated semester fee based on selected discipline category and credit load.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-slate-300 mb-2">Academic Faculty</label>
+                        <select id="calc-faculty" onchange="calculateFee()" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-semibold text-white focus:outline-none focus:border-emerald-500">
+                            <option value="medicine">Alternative Medicine (Therapies)</option>
+                            <option value="social">Social Sciences & Humanities</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-slate-300 mb-2">Total Credit Hours / Semester</label>
+                        <select id="calc-credits" onchange="calculateFee()" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-semibold text-white focus:outline-none focus:border-emerald-500">
+                            <option value="12">12 Credit Hours (Light Load)</option>
+                            <option value="15" selected>15 Credit Hours (Standard Load)</option>
+                            <option value="18">18 Credit Hours (Full Load)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <div>
+                        <span class="block text-xs text-slate-300 font-extrabold uppercase">Estimated Semester Tuition</span>
+                        <span id="calc-result" class="text-3xl font-black gradient-text-gold">PKR 35,000</span>
+                    </div>
+                    <button onclick="openAdmissionModal()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg">
+                        Apply With Scholarship
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT & MEDIA UPLOADING PORTAL -->
+    <section id="upload-portal" class="py-24 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold uppercase text-xs tracking-widest block mb-2">Knowledge Repository Portal</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-slate-900 dark:text-white">Article, Photo & Content Upload Center</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-emerald-500 to-indigo-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7 bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+                    <div class="flex border-b border-slate-200 dark:border-slate-700 mb-6 space-x-4">
+                        <button type="button" onclick="setUploadType('article')" id="upload-tab-article" class="pb-3 text-xs font-extrabold uppercase text-emerald-600 border-b-2 border-emerald-600 flex items-center space-x-2">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <span>Article Upload</span>
+                        </button>
+                        <button type="button" onclick="setUploadType('photo')" id="upload-tab-photo" class="pb-3 text-xs font-extrabold uppercase text-slate-400 flex items-center space-x-2">
+                            <i class="fa-solid fa-image"></i>
+                            <span>Photo Upload</span>
+                        </button>
+                        <button type="button" onclick="setUploadType('content')" id="upload-tab-content" class="pb-3 text-xs font-extrabold uppercase text-slate-400 flex items-center space-x-2">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>General Content</span>
+                        </button>
+                    </div>
+
+                    <form id="upload-form" onsubmit="handleUploadSubmit(event)" class="space-y-5">
+                        <input type="hidden" id="upload-category" value="Article">
+                        
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Author / Scholar Name *</label>
+                            <input type="text" id="upload-author" required placeholder="e.g. Prof. Dr. Ahmad Khan" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Content Title *</label>
+                            <input type="text" id="upload-title" required placeholder="e.g. Clinical Study on Electrohomeopathy Remedies" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Attachment File / Image</label>
+                            <input type="file" id="upload-file" onchange="previewUploadFile(event)" class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 rounded-xl text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-emerald-500 file:text-white hover:file:bg-emerald-600">
+                            <div id="file-preview-box" class="mt-3 hidden">
+                                <img id="file-preview-img" class="w-32 h-32 object-cover rounded-xl border border-slate-300 shadow-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Detailed Content Narrative *</label>
+                            <textarea id="upload-body" rows="4" required placeholder="Type full research article content..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-indigo-600 text-white font-black py-4 rounded-xl text-xs uppercase tracking-wider shadow-lg hover:opacity-95 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <span>Publish to Institutional Board</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-8 rounded-3xl border border-slate-700 shadow-lg">
+                        <h3 class="text-xl font-bold font-serif mb-2 flex items-center justify-between">
+                            <span>Repository Instructions</span>
+                            <i class="fa-solid fa-folder-tree text-emerald-400"></i>
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            All uploaded content is logged live on the homepage activity log and routed to the academic review panel via <span class="text-emerald-400 font-bold">lhramcollage@gmail.com</span>.
+                        </p>
+                        <a href="#live-dashboard" class="inline-flex items-center space-x-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
+                            <span>View Live Submissions Feed</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-slate-200 dark:border-slate-700 text-xs space-y-3">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-sm flex items-center space-x-2">
+                            <i class="fa-solid fa-download text-gold-500"></i>
+                            <span>Download Syllabus & Prospectus</span>
+                        </h4>
+                        <p class="text-slate-500 dark:text-slate-400">Get complete PDF syllabus details for Alternative Medicine therapies or Social Sciences courses.</p>
+                        <div class="flex gap-3 pt-2">
+                            <button onclick="downloadProspectus('Medicine')" class="flex-1 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 py-2.5 rounded-xl font-bold hover:bg-emerald-200 transition-colors">
+                                Therapies PDF
+                            </button>
+                            <button onclick="downloadProspectus('Social')" class="flex-1 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 py-2.5 rounded-xl font-bold hover:bg-indigo-200 transition-colors">
+                                Humanities PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLETE ONLINE ADMISSION & INQUIRY SECTION -->
+    <section id="admission-section" class="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="bg-gradient-to-r from-emerald-500 to-indigo-500 text-white text-xs font-black uppercase px-4 py-1.5 rounded-full shadow-lg">Official Admissions Portal</span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-serif leading-tight">Apply Online For Admission</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Select from our <strong>7 Alternative Therapies</strong> or <strong>45 Social Science & Science subjects</strong>. Submit your information for instant admission verification.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Instant Live Dashboard Recording</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Official Registration via <strong>lhramcollage@gmail.com</strong></span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>24/7 Telephone Support: <strong>03092625238</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="lg:col-span-7 bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-8 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-2xl font-black font-serif mb-1">Online Admission Application</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Complete all mandatory details to initiate enrollment.</p>
+
+                    <form id="admission-form" onsubmit="handleAdmissionSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Full Applicant Name *</label>
+                                <input type="text" id="adm-name" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Father / Guardian Name</label>
+                                <input type="text" id="adm-father" placeholder="Guardian Name" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Phone / WhatsApp Number *</label>
+                                <input type="tel" id="adm-phone" required placeholder="03092625238" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Email Address *</label>
+                                <input type="email" id="adm-email" required placeholder="lhramcollage@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Faculty Category *</label>
+                                <select id="adm-faculty" onchange="updateCourseDropdown()" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                                    <option value="">-- Select Faculty --</option>
+                                    <option value="medicine">Alternative Medicine (7 Therapies)</option>
+                                    <option value="social">Social Sciences & Humanities (45 Subjects)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Primary Discipline *</label>
+                                <select id="adm-course" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                                    <option value="">-- Select Faculty First --</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Prior Educational Degree *</label>
+                            <input type="text" id="adm-qualification" required placeholder="Matric / FA / FSc / BA / BS / MA" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Postal / Permanent Address</label>
+                            <textarea id="adm-address" rows="2" placeholder="Full Home Address" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-4 rounded-xl text-xs uppercase tracking-wider shadow-lg transition-all">
+                            Submit Complete Admission Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HELPDESK & QUERY FORM -->
+    <section class="py-20 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-emerald-600 dark:text-emerald-400 font-extrabold uppercase text-xs tracking-widest block">Direct Assistance</span>
+                    <h3 class="text-3xl font-black font-serif text-slate-900 dark:text-white">Have Admissions Queries?</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Send your inquiry directly to our academic team.</p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center space-x-3 text-sm font-bold text-slate-800 dark:text-slate-200">
+                            <i class="fa-solid fa-phone text-emerald-500 text-lg"></i>
+                            <span>03092625238</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-sm font-bold text-slate-800 dark:text-slate-200">
+                            <i class="fa-solid fa-envelope text-indigo-500 text-lg"></i>
+                            <span>lhramcollage@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md">
+                    <form onsubmit="handleQuerySubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Your Name *</label>
+                                <input type="text" id="qry-name" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Phone / WhatsApp *</label>
+                                <input type="tel" id="qry-phone" required placeholder="03092625238" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Email Address *</label>
+                            <input type="email" id="qry-email" required placeholder="lhramcollage@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Your Inquiry / Question *</label>
+                            <textarea id="qry-message" rows="3" required placeholder="Type your inquiry here..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-slate-900 dark:bg-emerald-600 hover:bg-slate-800 text-white font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow">
+                            Send Inquiry to Helpdesk
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-indigo-500 text-white flex items-center justify-center font-bold text-xl">
+                            <i class="fa-solid fa-mortar-pestle"></i>
+                        </div>
+                        <span class="text-white font-black font-serif text-lg">SAMSS</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        School of Alternative Medicine and Social Sciences. Empowering holistic health practitioners and social science researchers.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-extrabold text-xs uppercase tracking-wider mb-4">Navigational Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-emerald-400">Home Page</a></li>
+                        <li><a href="#live-dashboard" class="hover:text-emerald-400">Live Activity Board</a></li>
+                        <li><a href="#definitions" class="hover:text-emerald-400">Definitions & Functions</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400">52 Disciplines Directory</a></li>
+                        <li><a href="#upload-portal" class="hover:text-emerald-400">Content & Media Upload</a></li>
+                        <li><a href="#admission-section" class="hover:text-emerald-400">Online Admission Portal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-extrabold text-xs uppercase tracking-wider mb-4">Faculties</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-emerald-400 font-bold">7 Therapies:</span> Electrohomeopathy, Acupuncture, Hydrotherapy, Naturopathy, etc.</li>
+                        <li class="pt-2"><span class="text-indigo-400 font-bold">45 Social Sciences:</span> Law, IR, Economics, CS, History, Languages.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-extrabold text-xs uppercase tracking-wider mb-4">Helpline & Contacts</h4>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <span class="block text-slate-400 font-bold">Helpline Number</span>
+                            <a href="tel:03092625238" class="text-gold-400 text-base font-extrabold">03092625238</a>
+                        </div>
+                        <div>
+                            <span class="block text-slate-400 font-bold">Official Email</span>
+                            <a href="mailto:lhramcollage@gmail.com" class="text-indigo-300 text-xs font-bold">lhramcollage@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center">
+                <p>&copy; 2026 School of Alternative Medicine and Social Sciences. Helpline: 03092625238 | lhramcollage@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL FOR QUICK ONLINE ADMISSION -->
+    <div id="admission-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 relative shadow-2xl border border-slate-200 dark:border-slate-800">
+            <button onclick="closeAdmissionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-4">
+                <h3 class="text-2xl font-black font-serif text-slate-900 dark:text-white">Quick Online Admission</h3>
+                <p class="text-xs text-slate-500">Helpline: 03092625238 | Email: lhramcollage@gmail.com</p>
+            </div>
+            
+            <form onsubmit="handleAdmissionSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Full Name *</label>
+                    <input type="text" required id="modal-name" placeholder="Applicant name" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Phone / WhatsApp *</label>
+                    <input type="tel" required id="modal-phone" placeholder="03092625238" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Email Address *</label>
+                    <input type="email" required id="modal-email" placeholder="lhramcollage@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Desired Course *</label>
+                    <input type="text" required id="modal-course" placeholder="e.g. Electrohomeopathy or Computer Science" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-1">Prior Qualification *</label>
+                    <input type="text" required id="modal-qualification" placeholder="Matric / FA / FSc / BA" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-indigo-600 text-white font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-2xl border border-emerald-500/50 z-50 hidden transition-all flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+        <span id="toast-message" class="text-xs font-extrabold">Action logged!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // DARK MODE TOGGLE
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // ALL 52 COURSES COMPLETE DATA
+        const alternativeMedicineCourses = [
+            { title: "Electrohomeopathy", desc: "Spagyric herbal therapy restoring bodily lymphatic fluids & blood homeostasis.", icon: "fa-leaf" },
+            { title: "Acupuncture", desc: "Traditional Meridian energy acupuncture for organic healing & systemic pain relief.", icon: "fa-disease" },
+            { title: "Acupressure", desc: "Non-invasive pressure point therapy targeting bio-energetic nerve reflexes.", icon: "fa-hand-holding-heart" },
+            { title: "Hydrotherapy", desc: "Water-based clinical thermal detox and cellular circulation restoration.", icon: "fa-water" },
+            { title: "Chromotherapy", desc: "Solar light spectrum & color therapy for metabolic equilibrium.", icon: "fa-sun" },
+            { title: "Aromatherapy", desc: "Volatile essential oil extracts application for organic healing.", icon: "fa-spray-can-sparkles" },
+            { title: "Naturotherapy", desc: "Fundamental naturopathic medicine, lifestyle dietetics & vitalistic healing.", icon: "fa-seedling" }
+        ];
+
+        const socialSciencesCourses = [
+            "Accountancy & Auditing", "Economics", "Computer Science", "Political Science", 
+            "International Relations", "Physics", "Chemistry", "Applied Mathematics", 
+            "Pure Mathematics", "Statistics", "Geology", "Business Administration", 
+            "Public Administration", "Governance & Public Policies", "Town Planning & Urban Management", 
+            "History of Pakistan & India", "Islamic History & Culture", "British History", 
+            "European History", "History of USA", "Gender Studies", "Environmental Sciences", 
+            "Agriculture & Forestry", "Botany", "Zoology", "English Literature", 
+            "Urdu Literature", "Law", "Constitutional Law", "International Law", 
+            "Muslim Law & Jurisprudence", "Mercantile Law", "Criminology", "Philosophy", 
+            "Journalism & Mass Communication", "Psychology", "Geography", "Sociology", 
+            "Anthropology", "Punjabi", "Sindhi", "Pashto", "Balochi", "Persian", "Arabic"
+        ];
+
+        // INITIAL RECORD DATA
+        const initialSubmissionsData = [
+            {
+                id: "ADM-801",
+                type: "Admission",
+                name: "Hamza Malik",
+                phone: "0300-1234567",
+                email: "hamza@gmail.com",
+                subject: "Electrohomeopathy Diploma",
+                detail: "Online Admission filed for Alternative Medicine. Contact helpline: 03092625238.",
+                status: "Approved",
+                timestamp: "5 mins ago"
+            },
+            {
+                id: "QRY-802",
+                type: "Query",
+                name: "Ayesha Bibi",
+                phone: "0315-9988776",
+                email: "ayesha@gmail.com",
+                subject: "BS Computer Science & Fee Waiver Query",
+                detail: "Inquired about class schedules and scholarship assistance.",
+                status: "Reviewing",
+                timestamp: "18 mins ago"
+            },
+            {
+                id: "UPL-803",
+                type: "Upload",
+                name: "Faculty of Natural Medicine",
+                phone: "03092625238",
+                email: "lhramcollage@gmail.com",
+                subject: "Research Article: Herbal Therapeutics",
+                detail: "Uploaded full clinical research paper on plant extracts.",
+                status: "Approved",
+                timestamp: "45 mins ago"
+            }
+        ];
+
+        let globalSubmissions = [];
+        let currentFeedFilter = 'all';
+
+        function loadSubmissions() {
+            const saved = localStorage.getItem('samss_vibrant_submissions');
+            if (saved) {
+                try {
+                    globalSubmissions = JSON.parse(saved);
+                } catch(e) {
+                    globalSubmissions = initialSubmissionsData;
+                }
+            } else {
+                globalSubmissions = initialSubmissionsData;
+                localStorage.setItem('samss_vibrant_submissions', JSON.stringify(globalSubmissions));
+            }
+            renderSubmissionsDashboard();
+        }
+
+        function saveAndAddSubmission(newEntry) {
+            globalSubmissions.unshift(newEntry);
+            localStorage.setItem('samss_vibrant_submissions', JSON.stringify(globalSubmissions));
+            renderSubmissionsDashboard();
+        }
+
+        function renderSubmissionsDashboard() {
+            const container = document.getElementById('activity-feed-container');
+            container.innerHTML = '';
+
+            let totalAdm = 0, totalQry = 0, totalUpl = 0;
+            globalSubmissions.forEach(item => {
+                if (item.type === 'Admission') totalAdm++;
+                else if (item.type === 'Query') totalQry++;
+                else if (item.type === 'Upload') totalUpl++;
+            });
+
+            document.getElementById('stat-admissions').innerText = totalAdm;
+            document.getElementById('stat-queries').innerText = totalQry;
+            document.getElementById('stat-uploads').innerText = totalUpl;
+
+            const filtered = globalSubmissions.filter(item => {
+                if (currentFeedFilter === 'all') return true;
+                return item.type === currentFeedFilter;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl text-center text-slate-400 text-xs">No records available under this filter.</div>`;
+                return;
+            }
+
+            filtered.forEach(item => {
+                let badgeStyle = "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300";
+                let iconClass = "fa-user-graduate";
+
+                if (item.type === "Query") {
+                    badgeStyle = "bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300";
+                    iconClass = "fa-circle-question";
+                } else if (item.type === "Upload") {
+                    badgeStyle = "bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300";
+                    iconClass = "fa-cloud-arrow-up";
+                }
+
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col sm:flex-row items-start justify-between gap-4";
+                card.innerHTML = `
+                    <div class="flex items-start space-x-3 w-full">
+                        <div class="w-10 h-10 rounded-xl ${badgeStyle} flex items-center justify-center text-base shrink-0 mt-0.5">
+                            <i class="fa-solid ${iconClass}"></i>
+                        </div>
+                        <div class="space-y-1 w-full">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full ${badgeStyle}">${item.type}</span>
+                                <span class="text-[10px] text-slate-400 font-bold"><i class="fa-regular fa-clock mr-1"></i>${item.timestamp}</span>
+                            </div>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white font-serif">${item.subject}</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">${item.detail}</p>
+                            <div class="pt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
+                                <span><i class="fa-solid fa-user text-emerald-500 mr-1"></i>${item.name}</span>
+                                <span><i class="fa-solid fa-phone text-emerald-500 mr-1"></i>${item.phone}</span>
+                                <span><i class="fa-solid fa-envelope text-indigo-500 mr-1"></i>${item.email}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterFeed(type) {
+            currentFeedFilter = type;
+            ['all', 'Admission', 'Query', 'Upload'].forEach(t => {
+                const btn = document.getElementById(`feed-filter-${t}`);
+                if (btn) {
+                    if (t === type) {
+                        btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-emerald-600 text-white transition-all";
+                    } else {
+                        btn.className = "px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all";
+                    }
+                }
+            });
+            renderSubmissionsDashboard();
+        }
+
+        // RENDER 52 COURSES
+        let currentTab = 'all';
+
+        function renderCourses() {
+            const container = document.getElementById('course-grid');
+            const searchVal = document.getElementById('course-search').value.toLowerCase();
+            container.innerHTML = '';
+
+            let listToRender = [];
+
+            if (currentTab === 'all' || currentTab === 'medicine') {
+                alternativeMedicineCourses.forEach(c => {
+                    listToRender.push({
+                        title: c.title,
+                        category: "Alternative Therapy Wing",
+                        desc: c.desc,
+                        icon: c.icon,
+                        badgeBg: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300"
+                    });
+                });
+            }
+
+            if (currentTab === 'all' || currentTab === 'social') {
+                socialSciencesCourses.forEach(c => {
+                    listToRender.push({
+                        title: c,
+                        category: "Social Sciences & Humanities",
+                        desc: `Comprehensive academic degree & research syllabus in ${c}.`,
+                        icon: getIconForSocialScience(c),
+                        badgeBg: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300"
+                    });
+                });
+            }
+
+            const filtered = listToRender.filter(item => 
+                item.title.toLowerCase().includes(searchVal) || 
+                item.category.toLowerCase().includes(searchVal)
+            );
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-400 text-sm">No disciplines matching "${searchVal}".</div>`;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-md glow-hover flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl ${item.badgeBg} flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <span class="text-[9px] uppercase font-black px-2.5 py-1 rounded-full ${item.badgeBg}">${item.category}</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-serif">${item.title}</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">${item.desc}</p>
+                    </div>
+                    <button onclick="applyForCourse('${item.title}')" class="w-full text-xs font-black uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 py-3 rounded-xl border border-emerald-200 dark:border-emerald-800 transition-colors flex items-center justify-center space-x-2">
+                        <span>Apply Online</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function getIconForSocialScience(title) {
+            if (title.includes("Law")) return "fa-gavel";
+            if (title.includes("History")) return "fa-landmark";
+            if (title.includes("Math") || title.includes("Statistics")) return "fa-calculator";
+            if (title.includes("Science") || title.includes("Physics") || title.includes("Chemistry")) return "fa-atom";
+            if (title.includes("Literature") || title.includes("Urdu") || title.includes("Arabic")) return "fa-book-open";
+            return "fa-graduation-cap";
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            ['all', 'medicine', 'social'].forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tab) {
+                    btn.className = 'px-5 py-2.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-emerald-500 to-indigo-600 text-white';
+                } else {
+                    btn.className = 'px-5 py-2.5 rounded-xl text-xs font-black transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700';
+                }
+            });
+            renderCourses();
+        }
+
+        function filterCourses() {
+            renderCourses();
+        }
+
+        // FEE ESTIMATOR CALCULATOR
+        function calculateFee() {
+            const faculty = document.getElementById('calc-faculty').value;
+            const credits = parseInt(document.getElementById('calc-credits').value);
+            
+            let ratePerCredit = faculty === 'medicine' ? 2400 : 2000;
+            let total = credits * ratePerCredit;
+            
+            document.getElementById('calc-result').innerText = `PKR ${total.toLocaleString()}`;
+        }
+
+        // DOWNLOAD PROSPECTUS MOCK FUNCTION
+        function downloadProspectus(faculty) {
+            showToast(`Generating Official ${faculty} Faculty Syllabus & Prospectus PDF...`);
+            setTimeout(() => {
+                const dummyText = `School of Alternative Medicine & Social Sciences\nFaculty: ${faculty}\nHelpline: 03092625238\nEmail: lhramcollage@gmail.com\n\nOfficial Prospectus Download Completed.`;
+                const blob = new Blob([dummyText], { type: "text/plain" });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = `SAMSS_${faculty}_Prospectus.txt`;
+                link.click();
+            }, 1000);
+        }
+
+        // EXPORT DATA (CSV/JSON)
+        function exportData(format) {
+            if (globalSubmissions.length === 0) {
+                showToast("No data to export!");
+                return;
+            }
+
+            if (format === 'json') {
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(globalSubmissions, null, 2));
+                const dl = document.createElement('a');
+                dl.setAttribute("href", dataStr);
+                dl.setAttribute("download", "SAMSS_Submissions_Export.json");
+                dl.click();
+            } else if (format === 'csv') {
+                let csvContent = "data:text/csv;charset=utf-8,ID,Type,Name,Phone,Email,Subject,Detail,Timestamp\n";
+                globalSubmissions.forEach(row => {
+                    csvContent += `"${row.id}","${row.type}","${row.name}","${row.phone}","${row.email}","${row.subject}","${row.detail}","${row.timestamp}"\n`;
+                });
+                const dl = document.createElement('a');
+                dl.setAttribute("href", encodeURI(csvContent));
+                dl.setAttribute("download", "SAMSS_Submissions_Export.csv");
+                dl.click();
+            }
+            showToast(`Exported all admissions records as ${format.toUpperCase()}!`);
+        }
+
+        // FORM & MODAL HANDLERS
+        function updateCourseDropdown() {
+            const faculty = document.getElementById('adm-faculty').value;
+            const courseSelect = document.getElementById('adm-course');
+            courseSelect.innerHTML = '<option value="">-- Select Discipline --</option>';
+
+            if (faculty === 'medicine') {
+                alternativeMedicineCourses.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c.title;
+                    opt.textContent = c.title;
+                    courseSelect.appendChild(opt);
+                });
+            } else if (faculty === 'social') {
+                socialSciencesCourses.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c;
+                    opt.textContent = c;
+                    courseSelect.appendChild(opt);
+                });
+            }
+        }
+
+        function applyForCourse(courseName) {
+            document.getElementById('admission-section').scrollIntoView({ behavior: 'smooth' });
+            
+            const isAlt = alternativeMedicineCourses.some(a => a.title === courseName);
+            const facultySelect = document.getElementById('adm-faculty');
+            facultySelect.value = isAlt ? 'medicine' : 'social';
+            updateCourseDropdown();
+            
+            document.getElementById('adm-course').value = courseName;
+            showToast(`Selected "${courseName}". Complete details below.`);
+        }
+
+        let currentUploadType = 'article';
+        function setUploadType(type) {
+            currentUploadType = type;
+            document.getElementById('upload-category').value = type.charAt(0).toUpperCase() + type.slice(1);
+            ['article', 'photo', 'content'].forEach(t => {
+                const btn = document.getElementById(`upload-tab-${t}`);
+                if (t === type) {
+                    btn.className = 'pb-3 text-xs font-extrabold uppercase text-emerald-600 border-b-2 border-emerald-600 flex items-center space-x-2';
+                } else {
+                    btn.className = 'pb-3 text-xs font-extrabold uppercase text-slate-400 flex items-center space-x-2';
+                }
+            });
+        }
+
+        function previewUploadFile(e) {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    document.getElementById('file-preview-img').src = evt.target.result;
+                    document.getElementById('file-preview-box').classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleUploadSubmit(e) {
+            e.preventDefault();
+            const author = document.getElementById('upload-author').value;
+            const title = document.getElementById('upload-title').value;
+            const body = document.getElementById('upload-body').value;
+
+            const newEntry = {
+                id: "UPL-" + Math.floor(100 + Math.random() * 900),
+                type: "Upload",
+                name: author,
+                phone: "03092625238",
+                email: "lhramcollage@gmail.com",
+                subject: `${currentUploadType.toUpperCase()}: ${title}`,
+                detail: body,
+                status: "Approved",
+                timestamp: "Just now"
+            };
+
+            saveAndAddSubmission(newEntry);
+            document.getElementById('upload-form').reset();
+            document.getElementById('file-preview-box').classList.add('hidden');
+            showToast('Media / Article content published to live board!');
+        }
+
+        function handleAdmissionSubmit(e) {
+            e.preventDefault();
+            let name = document.getElementById('adm-name')?.value || document.getElementById('modal-name')?.value;
+            let phone = document.getElementById('adm-phone')?.value || document.getElementById('modal-phone')?.value;
+            let email = document.getElementById('adm-email')?.value || document.getElementById('modal-email')?.value;
+            let course = document.getElementById('adm-course')?.value || document.getElementById('modal-course')?.value;
+            let qual = document.getElementById('adm-qualification')?.value || document.getElementById('modal-qualification')?.value;
+
+            const newEntry = {
+                id: "ADM-" + Math.floor(100 + Math.random() * 900),
+                type: "Admission",
+                name: name || "Applicant",
+                phone: phone || "03092625238",
+                email: email || "lhramcollage@gmail.com",
+                subject: `Admission Application: ${course}`,
+                detail: `Qualification: ${qual}. Processed online. Contact: 03092625238.`,
+                status: "Approved",
+                timestamp: "Just now"
+            };
+
+            saveAndAddSubmission(newEntry);
+            showToast('Admission submitted and logged live!');
+            closeAdmissionModal();
+            if (document.getElementById('admission-form')) document.getElementById('admission-form').reset();
+        }
+
+        function handleQuerySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('qry-name').value;
+            const phone = document.getElementById('qry-phone').value;
+            const email = document.getElementById('qry-email').value;
+            const msg = document.getElementById('qry-message').value;
+
+            const newEntry = {
+                id: "QRY-" + Math.floor(100 + Math.random() * 900),
+                type: "Query",
+                name: name,
+                phone: phone,
+                email: email,
+                subject: `Helpdesk Query from ${name}`,
+                detail: msg,
+                status: "Reviewing",
+                timestamp: "Just now"
+            };
+
+            saveAndAddSubmission(newEntry);
+            showToast('Query logged live on Home Board!');
+            e.target.reset();
+        }
+
+        function openAdmissionModal() {
+            document.getElementById('admission-modal').classList.remove('hidden');
+        }
+
+        function closeAdmissionModal() {
+            document.getElementById('admission-modal').classList.add('hidden');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        window.onload = function() {
+            renderCourses();
+            loadSubmissions();
+            calculateFee();
+        };
+    </script>
+</body>
+</html>
